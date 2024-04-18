@@ -7,9 +7,15 @@ const Home = () => {
   const [posts, setPosts] = useState([]);
 
   useEffect(() => {
-    fetch("https://jsonplaceholder.typicode.com/posts")
-      .then((response) => response.json())
-      .then((posts) => setPosts(posts));
+    const fetchPosts = async () => {
+      const response = await fetch(
+        "https://jsonplaceholder.typicode.com/posts"
+      );
+      const data = await response.json();
+      console.log(data);
+      setPosts(data);
+    };
+    fetchPosts();
   }, []);
 
   return (
