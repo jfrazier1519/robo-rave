@@ -1,7 +1,7 @@
 import React from "react";
 import Post from "./Post";
 
-const PostList = ({ posts }) => {
+const PostList = ({ posts, images }) => {
   return (
     <div className="post-list">
       {posts.map((post, i) => {
@@ -12,6 +12,7 @@ const PostList = ({ posts }) => {
               id={posts[i].id}
               title={posts[i].title}
               body={posts[i].body}
+              image={images[i].url}
             />
             <hr className="white " />
           </>

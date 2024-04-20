@@ -1,9 +1,12 @@
 import React from "react";
+import "./Post.css";
 
-const Post = ({ id, title, body }) => {
+const Post = ({ id, title, body, image }) => {
   return (
     <div className="card mb-3">
-      <img src="..." className="card-img-top" alt="..." />
+      <div className="p-2">
+        <img src={image} className="card-img-top image rounded" alt="..." />
+      </div>
       <div className="card-body">
         <h5 className="card-title">{title}</h5>
         <p className="card-text">{body}</p>

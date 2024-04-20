@@ -1,5 +1,6 @@
 import React from "react";
 import logo from "../../assets/favicon.png"; // Adjust the path as necessary
+import "./Navbar.css";
 
 const Navbar = () => {
   return (
