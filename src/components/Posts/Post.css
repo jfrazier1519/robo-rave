@@ -1,1 +1,19 @@
+.img-container {
+  max-height: min(100%, 540px); /* Limit the max height */
+  display: flex; /* Use flex layout */
+  justify-content: center; /* Center the image horizontally */
+  align-items: center; /* Center the image vertically */
+  border: 1px solid #dcdcdc4f; /* Light gray border */
+  border-radius: 5px;
+}
 
+.image {
+  max-height: 100%; /* The image should respect the max height */
+  max-width: 100%; /* It should also not exceed the container's width */
+  object-fit: contain; /* Keep aspect ratio, scale within container */
+}
+
+.card {
+  background-color: rgb(0, 0, 0, 0.3);
+  color: rgba(255, 255, 255, 0.918);
+}

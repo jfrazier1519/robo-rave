@@ -1,7 +1,7 @@
 import React from "react";
 import "./Container.css"; // Custom CSS for additional styles
 
-const Container = () => {
+const PopularCommunities = () => {
   const communities = [
     {
       icon: "https://upload.wikimedia.org/wikipedia/commons/thumb/9/91/PlayStation_App_Icon.jpg/640px-PlayStation_App_Icon.jpg",
@@ -45,4 +45,4 @@ const Container = () => {
   );
 };
 
-export default Container;
+export default PopularCommunities;

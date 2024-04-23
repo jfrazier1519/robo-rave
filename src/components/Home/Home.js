@@ -4,6 +4,7 @@ import SideNav from "../Navigation/SideNav";
 import PostList from "../Posts/PostList";
 import "./Home.css";
 import Container from "../ContainerList/Container";
+import PopularCommunities from "../ContainerList/Container";
 
 const Home = () => {
   const [posts, setPosts] = useState([]);
@@ -42,7 +43,7 @@ const Home = () => {
             <PostList posts={posts} images={images} />
           </div>
         </div>
-        <Container />
+        <PopularCommunities />
       </div>
     </>
   );
