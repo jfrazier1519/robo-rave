@@ -1,6 +1,5 @@
 import React from "react";
-import "./Container.css"; // Custom CSS for additional styles
-
+import "./PopularCommunities.css";
 const PopularCommunities = () => {
   const communities = [
     {
@@ -21,7 +20,7 @@ const PopularCommunities = () => {
   ];
 
   return (
-    <div className="container w-25 my-4 shadow-sm p-4 bg-container rounded text-color">
+    <div className="container shadow-sm p-4 bg-container rounded text-color">
       <h2 className="mb-4">Popular Communities</h2>
       <ul className="list-unstyled">
         {communities.map((community, index) => (

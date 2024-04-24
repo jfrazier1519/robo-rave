@@ -4,11 +4,11 @@ import "./SideNav.css";
 const SideNav = () => {
   return (
     <nav
-      className="navbar fixed-top flex-shrink-0 p-3 text-white bg outline"
+      className="navbar flex-shrink-0 p-3 text-white bg-nav"
       style={{ width: "280px" }}
     >
-      <ul className="nav nav-pills flex-column mb-auto mt-5">
-        <li className="nav-item mt-2">
+      <ul className="nav nav-pills flex-column mb-auto">
+        <li className="nav-item">
           <a href="/" className="nav-link text-white" aria-current="page">
             <svg className="bi me-2 " width="16" height="16">
               <use href="#home" />

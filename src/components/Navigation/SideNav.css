@@ -1,3 +1,11 @@
-.nav-link:hover {
-  color: rgb(74, 194, 241) !important;
+li:hover {
+  background-color: rgba(255, 255, 255, 0.274);
+}
+
+.bg-nav {
+  position: sticky;
+  top: 75px;
+  z-index: 1;
+  background-color: rgba(0, 0, 0, 0.3);
+  border-right: 1px solid rgba(255, 255, 255, 0.637);
 }

@@ -4,7 +4,7 @@ import "./Navbar.css";
 
 const Navbar = () => {
   return (
-    <nav className="navbar sticky-top bg-custom text-white outline">
+    <nav className="navbar bg-custom text-white outline">
       <div className="container-fluid">
         <a className="navbar-brand text-white" href="/">
           <img

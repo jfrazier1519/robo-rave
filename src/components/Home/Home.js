@@ -3,8 +3,8 @@ import Navbar from "../Navigation/Navbar";
 import SideNav from "../Navigation/SideNav";
 import PostList from "../Posts/PostList";
 import "./Home.css";
-import Container from "../ContainerList/Container";
-import PopularCommunities from "../ContainerList/Container";
+import Container from "../PopularCommunities/PopularCommunities";
+import PopularCommunities from "../PopularCommunities/PopularCommunities";
 
 const Home = () => {
   const [posts, setPosts] = useState([]);
@@ -32,20 +32,24 @@ const Home = () => {
   }, []);
 
   return (
-    <>
-      <Navbar />
-      <div className="d-flex">
-        <div className="w-25">
-          <SideNav />
-        </div>
-        <div className="list-holder rounded">
-          <div className="p-3 w-100 ">
+    <div className="main-container">
+      <div className="nav-container">
+        <Navbar />
+      </div>
+      <div className="body-container">
+        <div className="d-flex">
+          <div className="w-25">
+            <SideNav />
+          </div>
+          <div className="list-holder p-3 rounded">
             <PostList posts={posts} images={images} />
           </div>
+          <div>
+            <PopularCommunities />
+          </div>
         </div>
-        <PopularCommunities />
       </div>
-    </>
+    </div>
   );
 };
 

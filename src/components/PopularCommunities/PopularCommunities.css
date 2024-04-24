@@ -1,3 +1,10 @@
+.bg-container {
+  background-color: rgba(0, 0, 0, 0.3);
+  position: sticky;
+  top: 100px;
+  z-index: 1;
+}
+
 .community-avatar {
   width: 40px;
   height: 40px;
@@ -6,11 +13,6 @@
 
 .text-color {
   color: rgba(255, 255, 255, 0.637);
-}
-
-.bg-container {
-  background-color: rgba(0, 0, 0, 0.3);
-  height: 100%;
 }
 
 .list-item {

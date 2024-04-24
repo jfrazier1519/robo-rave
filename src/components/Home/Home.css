@@ -1,3 +1,25 @@
+.main-container {
+  display: flex; /* Enable flex layout */
+  flex-direction: column;
+  height: 100vh;
+  overflow: visible;
+  overflow-y: auto;
+}
+
+.nav-container {
+  position: sticky;
+  top: 0;
+  border-bottom: 1px solid rgba(255, 255, 255, 0.637);
+  z-index: 1000;
+}
+
+.body-container {
+  flex-grow: 1;
+}
+
 .list-holder {
   width: 756px;
+  display: flex;
+  flex-direction: row;
+  margin-left: 5rem;
 }
