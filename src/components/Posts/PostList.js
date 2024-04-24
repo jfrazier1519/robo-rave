@@ -1,7 +1,8 @@
 import React from "react";
 import Post from "./Post";
+import { ClipLoader } from "react-spinners";
 
-const PostList = ({ posts, images }) => {
+const PostList = ({ posts, images, loading }) => {
   return (
     <div className="post-list">
       {posts.map((post, i) => {
@@ -18,6 +19,14 @@ const PostList = ({ posts, images }) => {
           </>
         );
       })}
+
+      {loading && (
+        <div className="loading-indicator">
+          {" "}
+          <ClipLoader color="#00bfff" size={25} />
+          <span>Loading more posts...</span>
+        </div>
+      )}
     </div>
   );
 };
