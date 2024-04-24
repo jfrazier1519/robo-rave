@@ -4,7 +4,7 @@ import "./SideNav.css";
 const SideNav = () => {
   return (
     <nav
-      className="navbar flex-shrink-0 p-3 text-white bg-nav"
+      className="side-nav navbar flex-shrink-0 p-3 text-white bg-nav"
       style={{ width: "280px" }}
     >
       <ul className="nav nav-pills flex-column mb-auto">
