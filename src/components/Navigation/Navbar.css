@@ -5,3 +5,31 @@
     rgba(0, 81, 86) 100%
   );
 }
+
+.btn-primary {
+  background-color: rgb(2, 105, 118);
+}
+
+.btn-primary:hover {
+  background-color: rgba(2, 105, 118, 0.6);
+}
+
+.navbar {
+  padding: 10px;
+}
+
+.container-fluid {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.search-container {
+  width: 500px;
+  margin-right: 9em;
+}
+
+.login-container {
+  display: flex;
+  justify-content: flex-end;
+}
