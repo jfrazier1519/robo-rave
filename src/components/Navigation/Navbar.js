@@ -23,7 +23,7 @@ const Navbar = () => {
           </a>
         </div>
 
-        <div className="search-container">
+        <div className="search-container ">
           {" "}
           <input
             className="form-control"

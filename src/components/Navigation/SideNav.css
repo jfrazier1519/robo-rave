@@ -16,7 +16,7 @@ li:hover {
 
 .bg-nav {
   position: sticky;
-  top: 75px;
+  top: 81px;
   z-index: 1;
   background-color: rgba(0, 81, 86);
   border-right: 1px solid rgba(255, 255, 255, 0.637);

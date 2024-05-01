@@ -1,8 +1,14 @@
+:root {
+  /* --max-content-width: 1200px; Maximum content width */
+  --sidebar-width: 280px; /* Sidebar width for calculation */
+  --base-padding: 1rem; /* Base padding */
+}
+
 .main-container {
-  display: flex; /* Enable flex layout */
+  display: flex;
   flex-direction: column;
   height: 100vh;
-  overflow: visible;
+  overflow-x: hidden; /* Prevents horizontal scroll */
   overflow-y: auto;
 }
 
@@ -15,13 +21,30 @@
 
 .body-container {
   flex-grow: 1;
+  display: flex;
+}
+
+.w-25 {
+  width: 25%;
+}
+
+.content-container {
+  flex-grow: 1;
+  display: flex;
+  flex-direction: row;
+  align-items: flex-start; /* Align items to the start to prevent vertical stretch */
+  max-width: var(--max-content-width);
+  margin: auto;
+  padding: var(--base-padding);
 }
 
 .list-holder {
-  width: 756px;
-  display: flex;
-  flex-direction: row;
-  margin-left: 5rem;
+  flex-grow: 1;
+  overflow: auto;
+}
+
+.popular-communities {
+  width: 60%;
 }
 
 .loading-indicator {
@@ -30,4 +53,59 @@
   align-items: center;
   padding: 10px;
   background-color: rgba(255, 255, 255, 0.1);
+}
+
+@media (min-width: 1200px) {
+  .content-container {
+    /* Set a specific max width */
+    width: calc(
+      100vw - 500px
+    ); /* Adjust the 272px to a higher value if necessary to create more side space */
+    margin-left: auto;
+    margin-right: auto;
+    padding-left: 1rem; /* Add padding if necessary */
+    padding-right: 1rem; /* Add padding if necessary */
+  }
+  .list-holder {
+    margin-right: 1rem;
+  }
+}
+
+@media (max-width: 1270px) {
+  .w-25 {
+    display: none; /* Hide sidebar when under 1200px */
+  }
+
+  .content-container {
+    width: 100%; /* Content takes full width */
+  }
+
+  .list-holder {
+    margin-right: 1rem;
+  }
+}
+
+@media (max-width: 960px) {
+  .popular-communities {
+    display: none; /* Hide popular communities when under 960px */
+  }
+
+  .list-holder {
+    width: 100%; /* Post list takes full width */
+    margin-right: 0;
+  }
+}
+
+@media (max-width: 768px) {
+  .body-container,
+  .content-container {
+    padding: var(--base-padding);
+  }
+}
+
+/* Additional responsive padding */
+@media (min-width: 768px) {
+  .body-container {
+    padding-right: 1rem;
+  }
 }

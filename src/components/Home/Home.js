@@ -57,16 +57,18 @@ const Home = () => {
           <div className="w-25">
             <SideNav />
           </div>
-          <div className="list-holder p-3 rounded">
-            <PostList
-              loading={loading}
-              posts={posts.slice(0, visiblePosts)}
-              images={images}
-            />
-          </div>
 
-          <div>
-            <PopularCommunities />
+          <div className="content-container">
+            <div className="list-holder rounded">
+              <PostList
+                loading={loading}
+                posts={posts.slice(0, visiblePosts)}
+                images={images}
+              />
+            </div>
+            <div className="popular-communities">
+              <PopularCommunities />
+            </div>
           </div>
         </div>
       </div>
