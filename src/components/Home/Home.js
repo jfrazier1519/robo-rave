@@ -2,7 +2,6 @@ import React, { useState, useEffect } from "react";
 import Navbar from "../Navigation/Navbar";
 import SideNav from "../Navigation/SideNav";
 import PostList from "../Posts/PostList";
-import { ClipLoader } from "react-spinners";
 import PopularCommunities from "../PopularCommunities/PopularCommunities";
 import "./Home.css";
 
@@ -11,6 +10,7 @@ const Home = () => {
   const [images, setImages] = useState([]);
   const [visiblePosts, setVisiblePosts] = useState(10);
   const [loading, setLoading] = useState(false);
+  const [isSidebarOpen, setIsSidebarOpen] = useState(false);
 
   useEffect(() => {
     const fetchPosts = async () => {
@@ -47,15 +47,20 @@ const Home = () => {
     }
   };
 
+  const toggleSidebar = () => {
+    setIsSidebarOpen(!isSidebarOpen);
+    console.log(isSidebarOpen);
+  };
+
   return (
     <div className="main-container" onScroll={handleScroll}>
       <div className="nav-container">
-        <Navbar />
+        <Navbar toggleSidebar={toggleSidebar} isSidebarOpen={isSidebarOpen} />
       </div>
       <div className="body-container">
         <div className="d-flex">
-          <div className="w-25">
-            <SideNav />
+          <div className="">
+            <SideNav isOpen={isSidebarOpen} />
           </div>
 
           <div className="content-container">

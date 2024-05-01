@@ -6,12 +6,23 @@ li:hover {
   position: fixed;
   top: 75px;
   height: calc(100vh - 75px);
-  width: 280px;
+  width: 280;
   background-color: rgba(0, 0, 0, 0.3);
   border-right: 1px solid rgba(255, 255, 255, 0.637);
   overflow-y: hidden;
-  z-index: 1;
-  transition: overflow-y 0.3s;
+  z-index: 2;
+  transition: width 0.3s ease, overflow-y 0.3s ease;
+}
+
+.side-nav.open {
+  display: block;
+  overflow-y: auto;
+}
+
+@media (max-width: 1270px) {
+  .side-nav {
+    display: none;
+  }
 }
 
 .bg-nav {
@@ -28,6 +39,17 @@ li:hover {
 
 li:hover {
   background-color: rgba(255, 255, 255, 0.274);
+}
+
+.sidebar-toggle {
+  display: none; /* Default to none for larger screens */
+}
+
+/* Show toggle button on smaller screens */
+@media (max-width: 1270px) {
+  .sidebar-toggle {
+    display: inline-block; /* Show the button when the screen is small */
+  }
 }
 
 /* Chrome, Edge, and Safari scrollbar customization */

@@ -24,10 +24,6 @@
   display: flex;
 }
 
-.w-25 {
-  width: 25%;
-}
-
 .content-container {
   flex-grow: 1;
   display: flex;
@@ -63,7 +59,7 @@
     ); /* Adjust the 272px to a higher value if necessary to create more side space */
     margin-left: auto;
     margin-right: auto;
-    padding-left: 1rem; /* Add padding if necessary */
+    padding-left: 3rem; /* Add padding if necessary */
     padding-right: 1rem; /* Add padding if necessary */
   }
   .list-holder {
@@ -72,10 +68,6 @@
 }
 
 @media (max-width: 1270px) {
-  .w-25 {
-    display: none; /* Hide sidebar when under 1200px */
-  }
-
   .content-container {
     width: 100%; /* Content takes full width */
   }

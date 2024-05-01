@@ -1,10 +1,12 @@
 import React from "react";
 import "./SideNav.css";
 
-const SideNav = () => {
+const SideNav = ({ isOpen }) => {
   return (
     <nav
-      className="side-nav navbar flex-shrink-0 p-3 text-white bg-nav"
+      className={`side-nav navbar flex-shrink-0 p-3 text-white bg-nav side-nav ${
+        isOpen ? "open" : ""
+      }`}
       style={{ width: "280px" }}
     >
       <ul className="nav nav-pills flex-column mb-auto">
